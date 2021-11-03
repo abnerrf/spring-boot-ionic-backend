@@ -14,9 +14,6 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>cursomc</name>
 	<description>Estudo de Caso Java para Curso de Modelagem Conceitual com UML</description>
-	<properties>
-		<java.version>8</java.version>
-	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

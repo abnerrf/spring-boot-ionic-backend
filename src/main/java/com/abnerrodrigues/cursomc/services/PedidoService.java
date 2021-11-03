@@ -14,7 +14,6 @@ import com.abnerrodrigues.cursomc.domain.enums.EstadoPagamento;
 import com.abnerrodrigues.cursomc.repositories.ItemPedidoRepository;
 import com.abnerrodrigues.cursomc.repositories.PagamentoRepository;
 import com.abnerrodrigues.cursomc.repositories.PedidoRepository;
-import com.abnerrodrigues.cursomc.repositories.ProdutoRepository;
 import com.abnerrodrigues.cursomc.services.exceptions.ObjectNotFoundException;
 
 @Service
@@ -67,7 +66,7 @@ public class PedidoService {
 			ip.setPedido(obj);
 		}
 		itemPedidoRepository.saveAll(obj.getItens());
-		emailService.sendOrderConfirmationEmail(obj);
+		emailService.sendOrderConfirmationHtmlEmail(obj);
 		return obj;
 	}
 }
